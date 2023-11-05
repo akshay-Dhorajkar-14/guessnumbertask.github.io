@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Task</title>
+  </head>
+  <body>
+    <script>
+
+
+var number = Math.ceil(Math.random() * 10) + 1;
+
+
+var guess;
+
+
+var count = 0;
+
+
+do {
+  
+  guess = prompt("Enter a guess between 1 and 10, or type 'quit' to end the game");
+
+   if (guess === "quit") {
+    break;
+  }
+
+  guess = Number(guess);
+
+  if (guess === number) {
+    
+    alert("You got it! The number was " + number + ". You guessed it in " + count + " tries.");
+  } else if (guess < number) {
+    
+    alert("Too low. Try a higher number.");
+  } else if (guess > number) {
+    
+    alert("Too high. Try a lower number.");
+  } else {
+    
+    alert("That's not a number. Please enter a number.");
+  }
+} while (guess !== number);
+
+
+    </script>
+  </body>
+</html>
